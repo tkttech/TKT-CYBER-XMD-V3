@@ -43,9 +43,9 @@ CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️�
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "923237045919",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "263718095555",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "ArslanMD Official",
+OWNER_NAME: process.env.OWNER_NAME || "TKT-TECH🇿🇼",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 TKT-TECH🇿🇼*",
 // add bot owner name    
