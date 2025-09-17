@@ -53,7 +53,7 @@ cmd({
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
     // GitHub stats
-    const githubRepo = 'https://github.com/tkttech/TKT-CYBER-XMD';
+    const githubRepo = 'https://github.com/tkttech/TKT-CYBER-XMD-V3';
 
     // Check update status
     let updateMessage = `✅ Your TKT-CYBER-XMD bot is up-to-date!`;
@@ -73,7 +73,7 @@ Use *.update* to update.`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
-      image: { url: 'https://files.catbox.moe/tgy86v.jpg' },
+      image: { url: 'https://files.catbox.moe/d622xc.png' },
       caption: statusMessage,
       contextInfo: {
         mentionedJid: [m.sender],
