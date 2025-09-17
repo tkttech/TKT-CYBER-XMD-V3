@@ -45,12 +45,12 @@ href="https://github.com/tkttech/TKT-CYBER-XMD/graphs/commit-activity"><img heig
 
  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=monospace-ExtraBold&color=blue&lines=𝗙𝗢𝗥𝗞+𝗔𝗡𝗗+𝗦𝗧𝗔𝗥+⭐+𝗥𝗘𝗣𝗢)](https://git.io/typing-svg)
  <p align="lift">
- <a href="https://github.com/tkttech/TKT-CYBER-XMD/fork"><img title="TKT-CYBER-V5" src="https://img.shields.io/badge/FORK-TKT-CYBER V5-h?color=008000&style=for-the-badge&logo=github"></a>
+ <a href="https://github.com/tkttech/TKT-CYBER-XMD-V3/fork"><img title="TKT-CYBER-V5" src="https://img.shields.io/badge/FORK-TKT-CYBER V5-h?color=008000&style=for-the-badge&logo=github"></a>
  
 
   **⛓️‍💥 NEW SESSION WEB ADDED**
   
-  <a href='https://tkt-cyber-xmd-web-pair.onrender.com/' target="_blank">
+  <a href='https://tkt-cyber-pair.onrender.com/' target="_blank">
     <img src='https://img.shields.io/badge/PAIR_CODE-FF0000?style=for-the-badge&logo=matrix&logoColor=white&labelColor=000000'/>
   </a></br>
 
@@ -148,7 +148,7 @@ jobs:
 
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&color=FFFFFF&background=000000&center=true&vCenter=true&width=600&lines=💎+TKT-CYBER+XMD+Quality+Edition+by+TAFADZWA+TKT;⚡+The+Future+of+WhatsApp+Bots+is+Here" alt="Footer Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&color=FFFFFF&background=000000&center=true&vCenter=true&width=600&lines=💎+TKT-CYBER+XMD-V3+Quality+Edition+by+TAFADZWA+TKT;⚡+The+Future+of+WhatsApp+Bots+is+Here" alt="Footer Animation">
 </h3>
 
 
