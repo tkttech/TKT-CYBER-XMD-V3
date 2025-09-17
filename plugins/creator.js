@@ -15,7 +15,7 @@ async (conn, mek, m, { from, sender, reply }) => {
         const ownerInfo = {
             name: "𝐓𝐄𝐂𝐇-𝐃𝐄𝐕-𝐈𝐍𝐂🇿🇼",
             number: "+263718095555",
-            photo: "https://files.catbox.moe/1cp4yq.jpeg",
+            photo: "https://files.catbox.moe/d622xc.png",
             bio: "The creator of this amazing bot"
         };
 
