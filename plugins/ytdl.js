@@ -58,7 +58,7 @@ cmd({
     });
     await _0x4be93c.sendMessage(_0x2c7589, {
       'react': {
-        'text': 'ArslanMD',
+        'text': 'TKT-TECH',
         'key': _0x2110e4.key
       }
     });
