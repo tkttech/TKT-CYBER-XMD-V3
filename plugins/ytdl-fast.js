@@ -1,104 +1,105 @@
-const config = require('../config');
-const { cmd } = require('../command');
-const { ytsearch } = require('@dark-yasiya/yt-dl.js');
-
-// MP4 video download
-
-cmd({ 
-    pattern: "mp4", 
-    alias: ["video"], 
-    react: "🎥", 
-    desc: "Download YouTube video", 
-    category: "main", 
-    use: '.mp4 < Yt url or Name >', 
-    filename: __filename 
-}, async (conn, mek, m, { from, prefix, quoted, q, reply }) => { 
-    try { 
-        if (!q) return await reply("Please provide a YouTube URL or video name.");
-        
-        const yt = await ytsearch(q);
-        if (yt.results.length < 1) return reply("No results found!");
-        
-        let yts = yt.results[0];  
-        let apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(yts.url)}`;
-        
-        let response = await fetch(apiUrl);
-        let data = await response.json();
-        
-        if (data.status !== 200 || !data.success || !data.result.download_url) {
-            return reply("Failed to fetch the video. Please try again later.");
-        }
-
-        let ytmsg = `📹 *Video Downloader*
-🎬 *Title:* ${yts.title}
-⏳ *Duration:* ${yts.timestamp}
-👀 *Views:* ${yts.views}
-👤 *Author:* ${yts.author.name}
-🔗 *Link:* ${yts.url}
->  𝐓𝐄𝐂𝐇-𝐃𝐄𝐕-𝐈𝐍𝐂🇿🇼`;
-
-        // Send video directly with caption
-        await conn.sendMessage(
-            from, 
-            { 
-                video: { url: data.result.download_url }, 
-                caption: ytmsg,
-                mimetype: "video/mp4"
-            }, 
-            { quoted: mek }
-        );
-
-    } catch (e) {
-        console.log(e);
-        reply("An error occurred. Please try again later.");
+const {
+  cmd
+} = require("../command");
+const fetch = require("node-fetch");
+const yts = require("yt-search");
+cmd({
+  'pattern': "play",
+  'alias': ['song', "mp3"],
+  'desc': "Download YouTube Audio",
+  'category': 'downloader',
+  'react': '💓,✅',
+  'filename': __filename
+}, async (_0x54d9ac, _0x5aa73c, _0x3dc390, {
+  from: _0x1d9214,
+  q: _0x4b1135,
+  reply: _0x13cbf0
+}) => {
+  try {
+    if (!_0x4b1135) {
+      return _0x13cbf0("Please provide a YouTube link or search query.\n\nExample: .play Pasoori");
     }
+    let _0x2d6fc6;
+    if (_0x4b1135.includes('youtube.com') || _0x4b1135.includes("youtu.be")) {
+      _0x2d6fc6 = _0x4b1135;
+    } else {
+      let _0x450784 = await yts(_0x4b1135);
+      if (!_0x450784 || !_0x450784.videos || _0x450784.videos.length === 0x0) {
+        return _0x13cbf0("No results found.");
+      }
+      _0x2d6fc6 = _0x450784.videos[0x0].url;
+    }
+    let _0x2dbca0 = await fetch('https://gtech-api-xtp1.onrender.com/api/audio/yt?apikey=APIKEY&url=' + encodeURIComponent(_0x2d6fc6));
+    let _0x2cc18f = await _0x2dbca0.json();
+    if (!_0x2cc18f.status) {
+      return _0x13cbf0("Failed to fetch audio.");
+    }
+    let {
+      audio_url: _0x5a3e99
+    } = _0x2cc18f.result.media;
+    await _0x54d9ac.sendMessage(_0x1d9214, {
+      'audio': {
+        'url': _0x5a3e99
+      },
+      'mimetype': "audio/mpeg",
+      'ptt': false
+    }, {
+      'quoted': _0x5aa73c
+    });
+  } catch (_0xf5f4cc) {
+    _0x13cbf0("âŒ Error while fetching audio.");
+    console.log(_0xf5f4cc);
+  }
 });
-
-// MP3 song download 
-
-cmd({ 
-    pattern: "song", 
-    alias: ["play", "mp3"], 
-    react: "🎶", 
-    desc: "Download YouTube song", 
-    category: "main", 
-    use: '.song <query>', 
-    filename: __filename 
-}, async (conn, mek, m, { from, sender, reply, q }) => { 
-    try {
-        if (!q) return reply("Please provide a song name or YouTube link.");
-
-        const yt = await ytsearch(q);
-        if (!yt.results.length) return reply("No results found!");
-
-        const song = yt.results[0];
-        const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
-        
-        const res = await fetch(apiUrl);
-        const data = await res.json();
-
-        if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
-
-    await conn.sendMessage(from, {
-    audio: { url: data.result.downloadUrl },
-    mimetype: "audio/mpeg",
-    fileName: `${song.title}.mp3`,
-    contextInfo: {
-        externalAdReply: {
-            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "THIS IS TKT-TECH BABY",
-            mediaType: 1,
-            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VarfjW04tRrmwfb8x306',
-            mediaUrl: 'https://whatsapp.com/channel/0029VarfjW04tRrmwfb8x306',
-            showAdAttribution: false,
-            renderLargerThumbnail: false
-        }
+cmd({
+  'pattern': 'video',
+  'alias': ["vid", "ytv"],
+  'desc': "Download YouTube Video",
+  'category': 'downloader',
+  'react': '🪄',
+  'filename': __filename
+}, async (_0x291138, _0x40711d, _0x320efe, {
+  from: _0x3764b7,
+  q: _0x247990,
+  reply: _0x5286ec
+}) => {
+  try {
+    if (!_0x247990) {
+      return _0x5286ec("Please provide a YouTube link or search query.\n\nExample: .video Pasoori");
     }
-}, { quoted: mek });
-
-    } catch (error) {
-        console.error(error);
-        reply("An error occurred. Please try again.");
+    let _0x3460a4;
+    if (_0x247990.includes("youtube.com") || _0x247990.includes('youtu.be')) {
+      _0x3460a4 = _0x247990;
+    } else {
+      let _0x145978 = await yts(_0x247990);
+      if (!_0x145978 || !_0x145978.videos || _0x145978.videos.length === 0x0) {
+        return _0x5286ec("No results found.");
+      }
+      _0x3460a4 = _0x145978.videos[0x0].url;
     }
+    let _0x32732f = await fetch("https://gtech-api-xtp1.onrender.com/api/video/yt?apikey=APIKEY&url=" + encodeURIComponent(_0x3460a4));
+    let _0x207ba6 = await _0x32732f.json();
+    if (!_0x207ba6.status) {
+      return _0x5286ec("Failed to fetch video.");
+    }
+    let {
+      video_url_hd: _0x2500e4,
+      video_url_sd: _0x1f2e71
+    } = _0x207ba6.result.media;
+    let _0x5f2691 = _0x2500e4 !== "No HD video URL available" ? _0x2500e4 : _0x1f2e71;
+    if (!_0x5f2691 || _0x5f2691.includes('No')) {
+      return _0x5286ec("No downloadable video found.");
+    }
+    await _0x291138.sendMessage(_0x3764b7, {
+      'video': {
+        'url': _0x5f2691
+      },
+      'caption': "Powered By ArslanMD Official"
+    }, {
+      'quoted': _0x40711d
+    });
+  } catch (_0x4a5abf) {
+    _0x5286ec("Error while fetching video.");
+    console.log(_0x4a5abf);
+  }
 });

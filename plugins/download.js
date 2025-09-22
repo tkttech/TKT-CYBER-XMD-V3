@@ -6,7 +6,41 @@ const { igdl } = require("ruhend-scraper");
 const axios = require("axios");
 const { cmd, commands } = require('../command');
 
+cmd({
+  pattern: "ig7",
+  alias: ["insta8", "Instagram9"],
+  desc: "To download Instagram videos.",
+  react: "🎥",
+  category: "download",
+  filename: __filename
+}, async (conn, m, store, { from, q, reply }) => {
+  try {
+    if (!q || !q.startsWith("http")) {
+      return reply("❌ Please provide a valid Instagram link.");
+    }
 
+    await conn.sendMessage(from, {
+      react: { text: "⏳", key: m.key }
+    });
+
+    const response = await axios.get(`https://insta-down.apis-bj-devs.workers.dev/?url=${q}`);
+    const data = response.data;
+
+    if (!data || data.status !== 200 || !data.downloadUrl) {
+      return reply("⚠️ Failed to fetch Instagram video. Please check the link and try again.");
+    }
+
+    await conn.sendMessage(from, {
+      video: { url: data.downloadUrl },
+      mimetype: "video/mp4",
+      caption: "📥 *Instagram Video Downloaded Successfully!*"
+    }, { quoted: m });
+
+  } catch (error) {
+    console.error("Error:", error);
+    reply("❌ An error occurred while processing your request. Please try again.");
+  }
+});
 
 
 // twitter-dl
@@ -220,7 +254,7 @@ cmd({
 ┃ 📅 *Updated On:* ${app.updated}
 ┃ 👨‍💻 *Developer:* ${app.developer.name}
 ╰━━━━━━━━━━━━━━━┈⊷
-🔗 *Powered By  𝐓𝐄𝐂𝐇-𝐃𝐄𝐕-𝐈𝐍𝐂🇿🇼*`;
+🔗 **© ᴘᴏᴡᴇʀᴇᴅ ʙʏ αяѕℓαη-м∂ мυℓтιρℓє ρσωєяƒυℓ ωнαтѕαρρ вσт ❣️*`;
 
     await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
 
@@ -271,7 +305,7 @@ cmd({
         document: { url: downloadUrl },
         mimetype: response.data.result.mimetype,
         fileName: response.data.result.fileName,
-        caption: "* 𝐓𝐄𝐂𝐇-𝐃𝐄𝐕S-𝐈𝐍𝐂🇿🇼 💔*"
+        caption: "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ χ нαѕι ❣️*"
       }, { quoted: m });
 
       await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
