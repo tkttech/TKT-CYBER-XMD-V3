@@ -13,7 +13,7 @@ cmd({
     filename: __filename,
 },
 async (conn, mek, m, { from, reply }) => {
-    const githubRepoURL = 'https://github.com/tkttech/TKT-CYBER-XMD';
+    const githubRepoURL = 'https://github.com/tkttech/TKT-CYBER-XMD-V3';
 
     try {
         // Extract username and repo name from the URL
@@ -59,7 +59,7 @@ async (conn, mek, m, { from, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363418027651738@newsletter',
-                    newsletterName: 'TKT-ᑕYᗷEᖇ-᙭ᗰᗪ',
+                    newsletterName: 'TKT-ᑕYᗷEᖇ-MD-V3',
                     serverMessageId: 143
                 }
             }
