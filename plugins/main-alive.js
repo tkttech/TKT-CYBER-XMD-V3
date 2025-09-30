@@ -15,8 +15,8 @@ async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
 ╭───〔 *🤖 ${config.BOT_NAME} STATUS* 〕───◉
-│✨ *Bot is Active & Online!*
-│
+│✨ *Bot is Active & Online,24/7non-stop!*
+│ *𝓒🅡Ⓔ🅐🅣🅞🅡* : *𝐓𝐀𝐅𝐀𝐃𝐙𝐖𝐀-𝐓𝐊𝐓🇿🇼*
 │🧠 *Owner:* ${config.OWNER_NAME}
 │⚡ *Version:* 4.0.0
 │📝 *Prefix:* [${config.PREFIX}]
