@@ -16,11 +16,11 @@ cmd({
 
         // Validate phone number format
         if (!phoneNumber || phoneNumber.length < 10 || phoneNumber.length > 15) {
-            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 923237045XXX`");
+            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 2637137045XXX`");
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://fantastic-mariellen-devtafadzwatkt.koyeb.app/pair?number=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://tkt-cyber-botz-0mcl.onrender.com/pair?number=${encodeURIComponent(phoneNumber)}`);
 
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
