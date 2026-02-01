@@ -1,6 +1,6 @@
 name: TKT-CYBER-XMD-V3
 services:
-  - name: muzammil_md-service
+  - name: TKT-CYBER-XMD-V3-service
     type: web
     ports:
       - 5000
