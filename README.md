@@ -1,6 +1,6 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=8A2BE2&center=true&width=1000&height=200&lines=TKT-CYBER-XMD" alt="Typing SVG" /></a>
   </div>
-<a><img src='https://files.catbox.moe/1cp4yq.jpeg'/></a>
+<a><img src='https://files.catbox.moe/d622xc.png'/></a>
 
 <p align="center">
   <a href="https://github.com/tkttech"><img title="Developer" src="https://img.shields.io/badge/Author-TKT-TECH%20MD-FF00FF.svg?style=big-square&logo=github" /></a>
@@ -17,12 +17,12 @@
 
 ---------
 
- <p align="center"><img src="https://profile-counter.glitch.me/{TAFADZWA-TKT}/count.svg" alt="TKTTECH :: Visitor's Count" old_src="https://profile-counter.glitch.me/{TAFADZWA-TKT}/count.svg" /></p>
+ <p align="center"><img src="https://profile-counter.glitch.me/{TAFADZWA-TKT}/count.svg" alt="tkttech:: Visitor's Count" old_src="https://profile-counter.glitch.me/{TAFADZWA-TKT}/count.svg" /></p>
 
 
 <p align="center">
 <a href="https://github.com/tkttech"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=square&color=darkpink"></a> &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=TKT-CYBER-V5&label=VIEWS&style=square&color=blue" />
+  <img src="https://komarev.com/ghpvc/?username=tkttech&label=VIEWS&style=square&color=blue" />
 </p>
 </p> 
 
