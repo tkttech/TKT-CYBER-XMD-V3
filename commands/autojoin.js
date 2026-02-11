@@ -26,7 +26,7 @@ async function autojoinCommand(sock, chatId, message, args) {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363418027651738@newsletter',
-                        newsletterName: 'TKT-CYBER-XMD-V3'
+                        newsletterName: 'TKT-CYBER-XMD-V3',
                         serverMessageId: -1
                     }
                 }
@@ -45,7 +45,7 @@ async function autojoinCommand(sock, chatId, message, args) {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363418027651738@newsletter',
-                        newsletterName: 'TKT-CYBER-XMD-V3'
+                        newsletterName: 'TKT-CYBER-XMD-V3',
                         serverMessageId: -1
                     }
                 }
@@ -61,7 +61,7 @@ async function autojoinCommand(sock, chatId, message, args) {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363418027651738@newsletter',
-                        newsletterName: 'TKT-CYBER-XMD'
+                        newsletterName: 'TKT-CYBER-XMD',
                         serverMessageId: -1
                     }
                 }
