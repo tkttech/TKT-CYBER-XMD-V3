@@ -150,8 +150,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029Vb70IdY60eBmvtGRT00R";
-global.ytch = "Tunzy Shop";
+global.channelLink = "https://whatsapp.com/channel/0029Vb5vbMM0LKZJi9k4ED1a";
+global.ytch = "TAFADZWA-TKT🇿🇼";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -159,8 +159,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363422591784062@newsletter',
-            newsletterName: 'TUNZY-MD',
+            newsletterJid: '120363418027651738@newsletter',
+            newsletterName: 'TKT-CYBER-XD',
             serverMessageId: -1
         }
     }
@@ -201,7 +201,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, { 
-                    text: '📢 *Join our Channel:*\https://whatsapp.com/channel/0029Vb70IdY60eBmvtGRT00R' 
+                    text: '📢 *Join our Channel:*\https://whatsapp.com/channel/0029Vb5vbMM0LKZJi9k4ED1a' 
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
@@ -210,7 +210,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 return;
             } else if (buttonId === 'support') {
                 await sock.sendMessage(chatId, { 
-                    text: `🔗 *Support*\n\nhttps://https://chat.whatsapp.com/EgWYHIPowuS1wv54JII6Ff?mode=hqrc` 
+                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/Io4z4RXyH6AAiBR0x7qL8K?mode=gi_t` 
                 }, { quoted: message });
                 return;
             }
