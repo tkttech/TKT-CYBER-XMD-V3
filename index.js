@@ -70,7 +70,7 @@ setInterval(() => {
     }
 }, 30_000) // check every 30 seconds
 
-let phoneNumber = "263781400473"
+let phoneNumber = "2347030626048"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "TKT-CYBER-XMD"
