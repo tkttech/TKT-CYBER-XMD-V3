@@ -41,7 +41,7 @@ async function getYupraDownloadByUrl(youtubeUrl) {
 }
 
 async function getOkatsuDownloadByUrl(youtubeUrl) {
-	const apiUrl = `https://okatsu-rolezapiiz.vercel.app/downloader/ytmp3?url=${encodeURIComponent(youtubeUrl)}`;
+	const apiUrl = `https://arslan-apis.vercel.app/download/ytmp3?url=${encodeURIComponent(youtubeUrl)}`;
 	const res = await tryRequest(() => axios.get(apiUrl, AXIOS_DEFAULTS));
 	// Okatsu response shape: { status, creator, title, format, thumb, duration, cached, dl }
 	if (res?.data?.dl) {
